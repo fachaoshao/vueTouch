@@ -36,7 +36,7 @@ vueTouch.prototype={
 		var disX=e.changedTouches[0].pageX-this.vueTouches.x;
 		var disY=e.changedTouches[0].pageY-this.vueTouches.y;
 		clearTimeout(this.time);
-		if(Math.abs(disX)>10||Math.abs(disY)>100){
+		if(Math.abs(disX)>10||Math.abs(disY)>15){
 			this.touchType=="swipe"&&this.vueCallBack(e);
 			if(Math.abs(disX)>Math.abs(disY)){
 				if(disX>10){
